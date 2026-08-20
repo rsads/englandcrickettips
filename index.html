@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#020815">
+<title>England Cricket Tips</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:Arial,Helvetica,sans-serif;color:#fff;background:#020815}
+.bg{position:fixed;inset:0;background:
+radial-gradient(circle at 50% 10%,#16477b 0,transparent 30%),
+radial-gradient(circle at 85% 75%,#073b67 0,transparent 30%),
+linear-gradient(150deg,#01040b,#03172b 55%,#01050b)}
+.stadium{position:absolute;left:-15%;right:-15%;bottom:-12%;height:50%;border-radius:50% 50% 0 0;
+background:repeating-linear-gradient(0deg,#06351f 0 9px,#08472a 10px 19px);
+transform:perspective(650px) rotateX(17deg);box-shadow:0 -55px 110px #00aaff2b}
+.light{position:absolute;width:240px;height:240px;border-radius:50%;filter:blur(58px);opacity:.18;animation:glow 4s infinite}
+.l1{left:-100px;top:-70px;background:#00b7ff}.l2{right:-100px;top:-50px;background:#ffd400;animation-delay:1.2s}.l3{left:40%;bottom:0;background:#0070ff;animation-delay:2.2s}
+@keyframes glow{50%{transform:scale(1.2);opacity:.32}}
+.ball{position:absolute;width:8px;height:8px;border-radius:50%;background:#ffd800;box-shadow:0 0 15px #ffd800;animation:float 7s linear infinite}
+.b1{left:8%;bottom:12%}.b2{left:72%;bottom:17%;animation-delay:2s}.b3{left:90%;bottom:28%;animation-delay:4s}
+@keyframes float{to{transform:translateY(-310px) translateX(35px);opacity:0}}
+
+.ticker{position:fixed;z-index:8;left:0;width:100%;height:28px;overflow:hidden;white-space:nowrap;background:#02050cf0;border-bottom:1px solid #18aaff88}
+.bottom{bottom:0;border-top:1px solid #18aaff88;border-bottom:0}
+.track{height:100%;display:inline-flex;align-items:center;gap:44px;padding-left:100%;min-width:max-content;animation:move 25s linear infinite}
+.reverse{animation-direction:reverse;animation-duration:27s}
+.track span{font-size:9px;font-weight:900;letter-spacing:.3px;color:#eaf5ff}
+.track span:nth-child(1),.track span:nth-child(4){color:#ffd800}.track span:nth-child(2){color:#54d8ff}
+@keyframes move{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+
+.wrap{position:relative;z-index:2;height:100dvh;width:min(100%,720px);margin:auto;padding:31px 6px;
+display:flex;align-items:center;justify-content:center}
+.card{width:100%;max-height:95dvh;overflow:hidden;text-align:center;padding:12px 14px 10px;
+border-radius:27px;background:#010611ed;border:1px solid #1b9dff88;
+box-shadow:0 0 60px #007dff30,inset 0 0 35px #00aaff0b}
+.logo{width:108px;height:108px;border-radius:50%;overflow:hidden;margin:0 auto 7px;
+border:3px solid #ffd51c;box-shadow:0 0 25px #00aaff55,0 0 35px #ffd00044;animation:logo 3s ease-in-out infinite}
+.logo img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes logo{50%{transform:scale(1.025);box-shadow:0 0 40px #00aaff88,0 0 45px #ffd00066}}
+.badge{display:inline-block;padding:7px 17px;border-radius:24px;background:linear-gradient(90deg,#ffe000,#ffae00);
+color:#07111b;font-size:12px;font-weight:950}
+h1{margin:8px 0 3px;font-size:clamp(31px,8vw,53px);line-height:.95;font-weight:1000;
+color:#fff;text-shadow:0 0 20px #139dff66}
+h1 span{display:block;color:#ffd900;font-size:.68em;font-style:italic;margin-top:3px}
+.sub{margin:5px 0 9px;color:#dce9f5;font-size:13px;font-weight:700}
+.tag{display:inline-block;padding:5px 12px;margin-bottom:9px;border-radius:8px;
+background:#075bc9;border:1px solid #37c2ff;color:#fff;font-size:10px;font-weight:900}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-bottom:8px}
+.box{min-height:60px;padding:8px 5px;border-radius:13px;background:linear-gradient(145deg,#061a2d,#020b17);
+border:1px solid #149dff88;box-shadow:inset 0 0 20px #008cff0c}
+.icon{display:block;font-size:19px}.box b{display:block;color:#ffd900;font-size:11px;margin:2px 0}.box small{font-size:8.5px;color:#cbd9e5}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:8px}
+.stat{padding:7px 3px;border-radius:12px;background:#06111e;border:1px solid #158eff77}
+.stat strong{display:block;color:#ffd900;font-size:17px}.stat span{font-size:8px;color:#b9cad9}
+.join{display:flex;align-items:center;justify-content:center;min-height:57px;border-radius:34px;
+background:linear-gradient(90deg,#00a8ff,#1470ff,#00cfff,#1470ff);background-size:300% 100%;
+color:#fff;text-decoration:none;font-size:18px;font-weight:1000;
+box-shadow:0 0 28px #008cff88,0 8px 28px #006dff55;animation:button 3s linear infinite,pulse 2s infinite}
+@keyframes button{to{background-position:300% 0}}@keyframes pulse{50%{transform:scale(1.015)}}
+.note{margin:5px 0 0;font-size:7.5px;color:#8ea2b6}
+
+@media(max-height:720px){
+.card{padding:9px 11px}.logo{width:84px;height:84px}.badge{font-size:9px;padding:5px 11px}
+h1{font-size:28px}.sub{font-size:10px;margin-bottom:6px}.tag{font-size:8px;padding:4px 9px;margin-bottom:5px}
+.grid{gap:5px;margin-bottom:6px}.box{min-height:48px;padding:6px 3px}.icon{font-size:15px}.box b{font-size:9.5px}.box small{font-size:7.5px}
+.stats{gap:4px;margin-bottom:6px}.stat{padding:5px}.stat strong{font-size:14px}.stat span{font-size:7px}
+.join{min-height:47px;font-size:15px}.note{font-size:6.5px}
+}
+@media(max-width:380px){
+.ticker{height:23px}.track span{font-size:7px}.track{gap:24px}.wrap{padding:26px 4px}.card{padding:7px}
+.logo{width:74px;height:74px}h1{font-size:24px}.sub{font-size:8.5px}.tag{font-size:7px}
+.box{min-height:43px;padding:5px 2px}.icon{font-size:13px}.box b{font-size:8.5px}.box small{font-size:6.8px}
+.stat strong{font-size:12px}.stat span{font-size:6.3px}.join{min-height:43px;font-size:13px}.note{display:none}
+}
+</style>
+</head>
+<body>
+<div class="bg"><div class="stadium"></div><div class="light l1"></div><div class="light l2"></div><div class="light l3"></div>
+<div class="ball b1"></div><div class="ball b2"></div><div class="ball b3"></div></div>
+
+<div class="ticker"><div class="track">
+<span>🏏 LIVE MATCH UPDATES</span><span>🎯 TOSS ANALYSIS</span><span>⚡ SESSION INSIGHTS</span><span>👥 PLAYING XI</span><span>🏆 MATCH ANALYSIS</span>
+</div></div>
+
+<main class="wrap"><section class="card">
+<div class="logo"><img src="england_cricket_tips_logo.jpg" alt="England Cricket Tips"></div>
+<div class="badge">✓ OFFICIAL CRICKET CHANNEL</div>
+<h1>ENGLAND <span>CRICKET TIPS 🏏</span></h1>
+<p class="sub">Analyze • Understand • Follow the Game</p>
+<div class="tag">SMART CRICKET ANALYSIS & MATCH INSIGHTS</div>
+
+<div class="grid">
+<div class="box"><span class="icon">🎯</span><b>TOSS TIPS</b><small>Pre-match toss insights</small></div>
+<div class="box"><span class="icon">📊</span><b>MATCH ANALYSIS</b><small>Stats & team performance</small></div>
+<div class="box"><span class="icon">🏏</span><b>SESSION TIPS</b><small>Match situation updates</small></div>
+<div class="box"><span class="icon">👥</span><b>PLAYING XI</b><small>Team news & key players</small></div>
+</div>
+
+<div class="stats">
+<div class="stat"><strong>DAILY</strong><span>Cricket Content</span></div>
+<div class="stat"><strong>LIVE</strong><span>Match Updates</span></div>
+<div class="stat"><strong>24×7</strong><span>Channel Activity</span></div>
+</div>
+
+<a class="join" href="https://t.me/+1V2TGBM9HxpjZDJl" target="_blank" rel="noopener noreferrer">🚀 &nbsp; JOIN TELEGRAM</a>
+<p class="note">Cricket analysis, information & entertainment. No guaranteed outcomes.</p>
+</section></main>
+
+<div class="ticker bottom"><div class="track reverse">
+<span>🟢 ENGLAND CRICKET TIPS • NEW UPDATE</span><span>🏏 NEXT MATCH • LIVE COVERAGE</span><span>⚡ TEAM NEWS & PLAYER INSIGHTS</span><span>🏆 DAILY CRICKET CONTENT</span>
+</div></div>
+</body>
+</html>
